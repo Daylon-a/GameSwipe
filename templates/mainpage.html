@@ -80,7 +80,6 @@
 </header>
 
 <main>
-  {% for games in selectedgame %}
 
   {# endfor #}
   <div id="myCarousel" class="carousel slide" data-bs-interval="false">
@@ -93,14 +92,14 @@
     {# First carousel item #}
     <div class="carousel-inner">
       <div class="carousel-item active">
-         <img src="{{games.img.url}}" class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" data-bs-pause="true"></img>
+         <img src="{{selectedgame.img.url}}" class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" data-bs-pause="true"></img>
          <div class="container">
           {# Inner content goes here #}
         </div>
       </div>
       {# Second carousel item #}
       <div class="carousel-item">
-          <img src="{{games.img.url}}" class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" data-bs-pause="true"></img>
+          <img src="{{secondselectedgame.img.url}}" class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" data-bs-pause="true"></img>
 
         <div class="container">
           {# Inner content goes here #}
@@ -108,7 +107,7 @@
       </div>
       {# Third carousel item #}
       <div class="carousel-item">
-        <img src="{{games.img.url}}"class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" data-bs-pause="true"></img>
+        <img src="{{thirdselectedgame.img.url}}"class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false" data-bs-pause="true"></img>
 
         <div class="container">
           <div class="carousel-caption text-end">
@@ -148,8 +147,8 @@
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <h1 style="color: white;"> {{games.gname}} : {{games.description}} </h1>
-    <button type="submit" formmethod="post"> I like this </button>
+   <!-- <h1 style="color: white;"> {{games.gname}} : {{games.description}} </h1>
+    <button type="submit" formmethod="post"> I like this </button> -->
 
     <!-- START THE FEATURETTES -->
     {% endfor %}

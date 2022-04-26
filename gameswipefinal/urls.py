@@ -21,14 +21,11 @@ from django.conf.urls.static import static
 from django.contrib.auth import urls
 from django.contrib.auth import views as auth_views
 
-import gamecarousel
-import accounts
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('gamecarousel.urls')),
     path('main/', include('gamecarousel.urls')),
-    path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
 ]
 
